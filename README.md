@@ -1,3 +1,3 @@
-Infinity Heroes.de Survivalsystem
+Infinity Heroes.de SGDuels
 
 Build Anweisungen sowie Releases folgen...
