@@ -12,6 +12,6 @@ public class _EventLoader implements Listener {
         plugin.getServer().getPluginManager().registerEvents(this, plugin);
     }
     @EventHandler public void onCommandSend(PlayerCommandSendEvent e){
-        Events_CommandSend.onCommandSend(e);
+        Event_CommandSend.onCommandSend(e);
     }
 }

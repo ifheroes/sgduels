@@ -15,13 +15,13 @@ public class Main extends JavaPlugin {
 
     @Override
     public void onEnable() {
-        //TODO create a messages.yml file for editing if it doesnt exist already.
+        //TODO create a messages.yml file for editing if it doesn't exist already.
         super.onEnable();
         main = this;
 
         if(Bukkit.getPluginManager().getPlugin("PlaceholderAPI") == null){
             //Bukkit.getPluginManager().registerEvents(this, this);
-            //TODO REFERING TO https://github.com/PlaceholderAPI/PlaceholderAPI/wiki/Hook-into-PlaceholderAPI
+            //TODO REFERRING TO https://github.com/PlaceholderAPI/PlaceholderAPI/wiki/Hook-into-PlaceholderAPI
             getLogger().warning("PlaceholderAPI nicht gefunden! Plugin texte werden eventuell fehlerhaft dargestellt!");
         }
 
@@ -42,7 +42,7 @@ public class Main extends JavaPlugin {
     private void loadCommands(){
 
         //HOME COMMANDS
-        CommandWorld world= new CommandWorld(this);
+        Command_World world= new Command_World(this);
         getCommand("world").setExecutor(world);
 
     }

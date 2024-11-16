@@ -1,12 +1,11 @@
 package com.akabex86.listeners;
 
-import com.akabex86.main.Main;
 import org.bukkit.entity.Player;
 import org.bukkit.event.player.PlayerCommandSendEvent;
 
 import java.util.ArrayList;
 
-public class Events_CommandSend {
+public class Event_CommandSend {
     //zur info: JA, das ist due klasse in der die befehlsliste an den spieler gesendet wird (für tab completion.)
     public static void onCommandSend(PlayerCommandSendEvent e){
         Player p = e.getPlayer();
