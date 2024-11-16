@@ -3,15 +3,14 @@ package com.akabex86.commands;
 import com.akabex86.main.Main;
 import org.bukkit.Bukkit;
 import org.bukkit.World;
-import org.bukkit.WorldType;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-public class CommandWorld implements CommandExecutor {
+public class Command_World implements CommandExecutor {
 
-    public CommandWorld(Main main){
+    public Command_World(Main main){
 
     }
     @Override
@@ -30,21 +29,21 @@ public class CommandWorld implements CommandExecutor {
                         "SEED: "+w.getSeed()+"\n" +
                         "SPAWN: "+w.getSpawnLocation()+"\n" +
                         "ENVIRONMENT: "+w.getEnvironment()+"\n" +
-                        "WORLDTYPE(DEPRECATED): "+w.getWorldType()+"\n" +
+                        "WORLD TYPE(DEPRECATED): "+w.getWorldType()+"\n" +
                         "");
                 return true;
             }
             if(args[0].equalsIgnoreCase("list")){
-                StringBuilder worldlist = new StringBuilder();
+                StringBuilder worldList = new StringBuilder();
                 for(World w: Bukkit.getWorlds()){
-                    worldlist.append("\n"+w.getName());
+                    worldList.append("\n").append(w.getName());
                 }
-                p.sendMessage("§eWelten§7:§8"+worldlist.toString());
+                p.sendMessage("§eWelten§7:§8"+worldList.toString());
                 return true;
             }
             if(args[0].equalsIgnoreCase("test")){
-                //Creates a testworld with the seed "0"
-                //WorldHandler.createWorld("testworld", World.Environment.NORMAL, WorldType.FLAT, (long)0);
+                //Creates a test world with the seed "0"
+                //WorldHandler.createWorld("test_world", World.Environment.NORMAL, WorldType.FLAT, (long)0);
             }
             //returning true returns the usage.
             return true;
